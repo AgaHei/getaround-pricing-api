@@ -12,17 +12,9 @@ from smart_input_encoder import encode_input
 # Load model
 model = joblib.load("models/optimized_model.pkl")
 
-# Load expected feature order
-import os
-
-# Get the absolute path to the root folder
-base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-feature_path = os.path.join(base_dir, "feature_order.txt")
-
-# Load expected feature order
-with open(feature_path, "r", encoding="cp1252") as f:
+# Load expected feature order  
+with open("feature_order.txt", "r", encoding="cp1252") as f:
     expected_features = [line.strip() for line in f.readlines()]
-
 
 # Load reference data
 reference_df = pd.read_csv("data/get_around_pricing_project.csv")
@@ -45,6 +37,10 @@ class FriendlyInput(BaseModel):
 
 # Create app
 app = FastAPI()  # Enable default /docs
+# Home route
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Getaround Pricing API!"}
 # Mount the static folder
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
@@ -58,18 +54,24 @@ def custom_docs():
 def swagger_ui():
     return get_swagger_ui_html(openapi_url="/openapi.json", title="Swagger UI")
 
-# Home route
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Getaround Pricing API!"}
-
 # Prediction route
+
 @app.post("/predict")
-def predict(data: FriendlyInput):
-    user_input = data.dict()
-    encoded_input, input_features = encode_input(user_input, reference_df)
-    input_vector = pd.Series(encoded_input, index=input_features).reindex(expected_features, fill_value=0).values
-    prediction = model.predict([input_vector])
-    return {"prediction": prediction.tolist()}
+def predict(input_data: FriendlyInput):
+    # Convert input to DataFrame
+    input_df = pd.DataFrame([input_data.dict()])
 
+    # Encode input
+    encoded_input = encode_input(input_df, reference_df)
 
+    # Reorder features
+    encoded_input = encoded_input[expected_features]
+
+    # Make prediction
+    prediction = model.predict(encoded_input)[0]
+
+    return {"predicted_price": round(prediction, 2)}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
