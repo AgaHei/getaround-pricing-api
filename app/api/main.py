@@ -20,7 +20,7 @@ base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 feature_path = os.path.join(base_dir, "feature_order.txt")
 
 # Load expected feature order
-with open(feature_path, "r") as f:
+with open(feature_path, "r", encoding="cp1252") as f:
     expected_features = [line.strip() for line in f.readlines()]
 
 
@@ -44,7 +44,7 @@ class FriendlyInput(BaseModel):
     car_type: str
 
 # Create app
-app = FastAPI(docs_url=None)  # Disable default /docs
+app = FastAPI()  # Enable default /docs
 # Mount the static folder
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
