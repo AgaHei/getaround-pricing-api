@@ -51,7 +51,8 @@ json
 {
   "prediction": [42.75]
 }
-📁 Project Structure
+
+# 📁 Project Structure
 Code
 Project Getaround/
 ├── data/
