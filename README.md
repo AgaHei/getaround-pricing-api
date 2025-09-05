@@ -1,3 +1,13 @@
+---
+title: Getaround Pricing API
+emoji: 🚗
+colorFrom: indigo
+colorTo: blue
+sdk: docker
+app_file: Dockerfile
+pinned: false
+---
+
 # 🚗 Getaround Pricing Optimization
 
 This project builds a machine learning pipeline to predict car rental prices for Getaround, using real-world vehicle data and deploying the model via a FastAPI web service.
@@ -46,6 +56,7 @@ json
   "paint_color": "black",
   "car_type": "suv"
 }
+
 Example Response
 json
 {
