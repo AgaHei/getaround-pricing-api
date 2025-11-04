@@ -93,41 +93,55 @@ curl -X POST 'https://agahei-getaround-pricing-api.hf.space/predict' \
 }
 ```
 
-## 📁 Project Structure
+## 📁 Repository Structure
+
+This GitHub repository contains the main development code and notebooks:
 
 ```
-Project Getaround Dev/
+getaround-pricing-api/
 ├── 📊 notebooks/
 │   ├── getaround_pricing.ipynb        # ML model development & training
 │   └── getaround_EDA.ipynb           # Exploratory data analysis
 ├── 📈 data/
-│   ├── get_around_pricing_project.csv      # Original pricing dataset
+│   ├── get_around_pricing_project.csv      # Original pricing dataset  
 │   └── cleaned_getaround_data.csv         # Processed delay analysis data
 ├── 🤖 models/
 │   └── best_xgb_model.pkl           # Trained XGBoost model
-├── 🔧 Deployment Files/
+├── 🔧 app/
+│   └── (legacy development files)    # Early API development
+├── 📦 archive/
+│   └── (archived development files)  # Backup files
+├── 🏃 mlruns/
+│   └── (MLflow experiment tracking)  # Local experiment logs
+├── 🐍 venv/
+│   └── (Python virtual environment) # Local development environment
+├── 📚 Core Files/
 │   ├── smart_input_encoder.py       # Data preprocessing utilities
 │   ├── feature_order.txt           # Model feature specification
 │   ├── requirements.txt            # Python dependencies
-│   └── Dockerfile                 # Container configuration
-└── 📚 Documentation/
-    ├── README.md                   # This file
-    └── .gitignore                 # Git exclusions
-
-Deployment HF Dashboard/
-└── getaround-dashboard/
-    ├── app.py                     # Streamlit dashboard application
-    ├── requirements.txt           # Dashboard dependencies
-    └── data/                      # Dashboard data files
-
-Deployment HF Pricing API/
-└── hf-space/
-    ├── app.py                     # FastAPI application
-    ├── smart_input_encoder.py     # Input processing
-    ├── feature_order.txt          # Model features
-    ├── models/                    # ML model files
-    └── data/                      # Reference datasets
+│   ├── Dockerfile                 # Container configuration
+│   ├── README.md                   # This documentation
+│   └── .gitignore                 # Git exclusions
+└── 🗂️ __pycache__/
+    └── (Python cache files)        # Compiled Python files
 ```
+
+### 🚀 **Deployment Repositories** (Separate HF Spaces)
+
+The live applications are deployed from separate repositories optimized for production:
+
+- **📊 Dashboard**: `Deployment HF Dashboard/getaround-dashboard/`
+  - Repository: https://huggingface.co/spaces/AgaHei/getaround-dashboard  
+  - Live App: https://huggingface.co/spaces/AgaHei/getaround-dashboard
+
+- **🔧 API**: `Deployment HF Pricing API/hf-space/`
+  - Repository: https://huggingface.co/spaces/AgaHei/getaround-pricing-api
+  - Live API: https://agahei-getaround-pricing-api.hf.space
+
+### 📝 **Development vs Deployment**
+
+- **This Repository**: Development environment with notebooks, experiments, and model training
+- **HF Spaces**: Production-optimized deployments with minimal dependencies and clean structure
 
 ## 🛠️ Technologies Used
 
