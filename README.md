@@ -1,6 +1,6 @@
 # 🚗 Getaround ML Price Optimization & Delay Analysis
 
-A comprehensive machine learning project for car rental price prediction and delay conflict analysis, featuring two deployed web applications and complete ML pipeline implementation.
+A comprehensive machine learning project for car rental price prediction and delay conflict analysis, featuring two deployed web applications and complete ML pipeline implementation. It is built as part of the Jedha Machine Learning Engineer certification (Bloc 5).
 
 ![Python](https://img.shields.io/badge/python-v3.10+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
@@ -55,14 +55,12 @@ This project addresses two key challenges in car rental platforms:
 - Visual delay distribution with KDE
 - Business insights and recommendations
 
-### 2. 🔧 Price Prediction API
-**URL**: https://agahei-getaround-pricing-api.hf.space
+### 2. 🔧 Price Prediction API Endpoints
 
-**Endpoints**:
-- `POST /predict` - Get price predictions
-- `GET /docs` - Interactive API documentation  
-- `GET /example` - Sample input examples
-- `GET /health` - Service health check
+- **Main API**: https://agahei-getaround-pricing-api.hf.space
+- **Interactive Documentation**: https://agahei-getaround-pricing-api.hf.space/docs
+- **Health Check**: https://agahei-getaround-pricing-api.hf.space/health
+
 
 **Example Usage**:
 ```bash
@@ -195,49 +193,6 @@ Deployment HF Pricing API/
 - **Market Competitive**: ML-powered pricing strategies  
 - **Revenue Optimization**: Maximize rental income per vehicle
 
-## 🔧 Local Development Setup
-
-### Prerequisites
-- Python 3.10+
-- Git
-- Docker (optional)
-
-### Installation Steps
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/AgaHei/getaround-project.git
-   cd getaround-project
-   ```
-
-2. **Create virtual environment**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run Jupyter notebooks**:
-   ```bash
-   jupyter notebook notebooks/
-   ```
-
-5. **Test API locally** (from deployment folder):
-   ```bash
-   cd "Deployment HF Pricing API/hf-space"
-   python app.py
-   ```
-
-6. **Run dashboard locally** (from dashboard folder):
-   ```bash
-   cd "Deployment HF Dashboard/getaround-dashboard"  
-   streamlit run app.py
-   ```
-
 ## 🧪 Testing
 
 ### API Testing
@@ -259,12 +214,6 @@ Visit the interactive documentation at `/docs` endpoint for comprehensive API te
 
 This project was developed as part of the Jedha Data Science certification program. 
 
-### Development Workflow
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
 
 ## 📝 License
 
@@ -279,9 +228,6 @@ This project is part of an educational certification program. Please respect aca
 
 ---
 
-## 📞 Contact
-
-**Project Developer**: AgaHei  
 **Live Applications**: 
 - [Dashboard](https://huggingface.co/spaces/AgaHei/getaround-dashboard)
 - [API](https://agahei-getaround-pricing-api.hf.space)
