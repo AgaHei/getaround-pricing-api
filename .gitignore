@@ -1,16 +1,66 @@
-# Ignore model files
+# =============================================================================
+# GETAROUND ML PROJECT - CLEAN REPOSITORY CONFIGURATION
+# Keep only essential files for professional ML portfolio showcase
+# =============================================================================
+
+# Model Files (too large for GitHub, deployed separately)
 *.pkl
+models/
 
-# Ignore MLflow logs
+# Development & Experiment Tracking
 mlruns/
+.mlruns/
+*.db
 
-# Ignore Python cache
+# Python Cache & Compiled Files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
 
-# Ignore virtual environments
+# Virtual Environments
 venv/
+env/
 .env
+.venv
 
-# Ignore archives and temporary files
+# Development Archives & Legacy Code
 archive/
+app/
+legacy/
+
+# Docker & Deployment (handled in separate HF Spaces)
+Dockerfile
+docker-compose.yml
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Data Files (keep structure, hide large files)
+data/*.csv
+!data/README.md
+
+# Log Files
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
