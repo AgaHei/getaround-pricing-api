@@ -95,35 +95,25 @@ curl -X POST 'https://agahei-getaround-pricing-api.hf.space/predict' \
 
 ## 📁 Repository Structure
 
-This GitHub repository contains the main development code and notebooks:
+This GitHub repository contains the essential ML development files (cleaned for professional presentation):
 
 ```
 getaround-pricing-api/
 ├── 📊 notebooks/
-│   ├── getaround_pricing.ipynb        # ML model development & training
-│   └── getaround_EDA.ipynb           # Exploratory data analysis
+│   ├── getaround_pricing.ipynb        # Complete ML pipeline & model training
+│   └── getaround_EDA.ipynb           # Exploratory data analysis & insights
 ├── 📈 data/
-│   ├── get_around_pricing_project.csv      # Original pricing dataset  
-│   └── cleaned_getaround_data.csv         # Processed delay analysis data
+│   ├── get_around_pricing_project.csv      # Original pricing dataset (1.7MB)
+│   ├── cleaned_getaround_data.csv         # Processed delay analysis data
+│   └── get_around_delay_analysis.xlsx     # Business analysis dataset
 ├── 🤖 models/
-│   └── best_xgb_model.pkl           # Trained XGBoost model
-├── 🔧 app/
-│   └── (legacy development files)    # Early API development
-├── 📦 archive/
-│   └── (archived development files)  # Backup files
-├── 🏃 mlruns/
-│   └── (MLflow experiment tracking)  # Local experiment logs
-├── 🐍 venv/
-│   └── (Python virtual environment) # Local development environment
-├── 📚 Core Files/
-│   ├── smart_input_encoder.py       # Data preprocessing utilities
-│   ├── feature_order.txt           # Model feature specification
+│   └── optimized_model.pkl          # Production XGBoost model (55MB)
+├── � Core ML Files/
+│   ├── smart_input_encoder.py       # Production data preprocessing
+│   ├── feature_order.txt           # Model feature specification (59 features)
 │   ├── requirements.txt            # Python dependencies
-│   ├── Dockerfile                 # Container configuration
-│   ├── README.md                   # This documentation
-│   └── .gitignore                 # Git exclusions
-└── 🗂️ __pycache__/
-    └── (Python cache files)        # Compiled Python files
+│   ├── README.md                   # Professional documentation
+│   └── .gitignore                 # Repository cleanup configuration
 ```
 
 ### 🚀 **Deployment Repositories** (Separate HF Spaces)
@@ -140,8 +130,9 @@ The live applications are deployed from separate repositories optimized for prod
 
 ### 📝 **Development vs Deployment**
 
-- **This Repository**: Development environment with notebooks, experiments, and model training
-- **HF Spaces**: Production-optimized deployments with minimal dependencies and clean structure
+- **This Repository**: Clean ML development portfolio with notebooks, trained models, and core utilities
+- **HF Spaces**: Production-optimized deployments with containerized applications and live APIs
+- **Professional Structure**: Repository cleaned for certification/portfolio presentation
 
 ## 🛠️ Technologies Used
 
@@ -250,4 +241,4 @@ This project is part of an educational certification program. Please respect aca
 
 ---
 
-*Last Updated: November 2025*
+*Last Updated: November 2025 - Repository cleaned for professional portfolio presentation*
