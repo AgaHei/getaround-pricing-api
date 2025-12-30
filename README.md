@@ -1,65 +1,101 @@
-# 🚗 Getaround ML Price Optimization & Delay Analysis
+# 🚗 Getaround ML Engineering Portfolio
 
-A comprehensive machine learning project for car rental price prediction and delay conflict analysis, featuring two deployed web applications and complete ML pipeline implementation. It is built as part of the Jedha Machine Learning Engineer certification (Bloc 5).
+A comprehensive machine learning project showcasing complete MLOps capabilities for car rental price optimization and delay analysis. Features three deployed professional applications demonstrating end-to-end ML pipeline implementation. Built as part of the Jedha Machine Learning Engineer certification (Bloc 5).
 
 ![Python](https://img.shields.io/badge/python-v3.10+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
+![MLflow](https://img.shields.io/badge/MLflow-2.8+-purple.svg)
 ![XGBoost](https://img.shields.io/badge/XGBoost-2.0+-orange.svg)
 ![Docker](https://img.shields.io/badge/Docker-enabled-blue.svg)
 
 ## 🎯 Project Overview
 
-This project addresses two key challenges in car rental platforms:
+This project addresses three key challenges in car rental platforms:
 
 1. **📊 Delay Analysis**: Understanding how late returns affect future rentals
 2. **💰 Price Optimization**: ML-powered dynamic pricing based on car specifications
+3. **🔬 Experiment Tracking**: Professional ML development with versioning and monitoring
 
-**Live Applications:**
-- 🌐 **Interactive Dashboard**: [Delay Analysis Dashboard](https://huggingface.co/spaces/AgaHei/getaround-dashboard)
-- 🔧 **API Service**: [Price Prediction API](https://agahei-getaround-pricing-api.hf.space)
+**🌟 Live Applications Portfolio:**
+- 🌐 **Interactive Dashboard**: [Delay Analysis & Business Intelligence](https://huggingface.co/spaces/AgaHei/getaround-dashboard)
+- 🤖 **Production API**: [Price Prediction Service](https://agahei-getaround-pricing-api.hf.space/docs)
+- 🔬 **Experiment Tracking**: [MLflow Professional Dashboard](https://huggingface.co/spaces/AgaHei/getaround-mlflow)
 
-## 🏆 Key Achievements
+## 🏆 Key Achievements & Professional Skills Demonstrated
 
 - ✅ **Production ML API** with 174€+ accurate price predictions
-- ✅ **Interactive Streamlit Dashboard** for business insights
-- ✅ **Complete MLOps Pipeline** from data to deployment
-- ✅ **Docker Containerization** for scalable deployment
-- ✅ **Comprehensive Documentation** with Swagger UI
+- ✅ **Interactive Business Dashboard** with real-time analysis
+- ✅ **Professional Experiment Tracking** with MLflow integration
+- ✅ **Docker Containerization** for scalable deployments
+- ✅ **Comprehensive Documentation** with API specifications
+- ✅ **Model Versioning & Monitoring** with experiment management
 
-## 📊 Model Performance
+## � Application Portfolio
 
-### Price Prediction Model (XGBoost)
-- **Algorithm**: Optimized XGBoost Regressor with GridSearchCV
-- **Features**: 59 engineered features from categorical encoding
-- **Performance Metrics**:
-  - RMSE: ~16.33
-  - MAE: ~10.10  
-  - R² Score: ~0.76
-- **Deployment**: FastAPI with automatic documentation
+### 1. 🌐 Interactive Dashboard
+**Live Demo**: [Getaround Delay Analysis Dashboard](https://huggingface.co/spaces/AgaHei/getaround-dashboard)
 
-### Business Impact Analysis
-- **Delay Threshold Optimization**: Interactive simulation tool
-- **Connect vs All Cars**: Comparative analysis capabilities
-- **Revenue Impact Assessment**: Real-time threshold testing
+**Key Features:**
+- Real-time delay conflict analysis
+- Interactive threshold optimization (15-600 minutes)
+- Connect vs All Cars scope selection  
+- Revenue impact calculations
+- Performance-optimized with caching
+- Professional business intelligence insights
 
-## 🚀 Live Applications
+### 2. 🤖 Price Prediction API  
+**Live Demo**: [Getaround Pricing API](https://agahei-getaround-pricing-api.hf.space/docs)
 
-### 1. 📊 Delay Analysis Dashboard
-**URL**: https://huggingface.co/spaces/AgaHei/getaround-dashboard
+**Key Features:**
+- RESTful API with FastAPI framework
+- Real-time price predictions (174€+ accuracy)
+- Automatic interactive documentation (Swagger UI)
+- Professional endpoint testing interface
+- Production-ready with proper validation
 
-**Features**:
-- Interactive threshold simulation (15-600 minutes)
-- Connect vs All Cars scope selection
-- Real-time conflict analysis
-- Visual delay distribution with KDE
-- Business insights and recommendations
+### 3. 🔬 MLflow Experiment Tracking
+**Live Demo**: [MLflow Professional Dashboard](https://huggingface.co/spaces/AgaHei/getaround-mlflow)
 
-### 2. 🔧 Price Prediction API Endpoints
+**Key Features:**
+- Complete experiment versioning
+- Model performance comparison across 4 algorithms
+- Hyperparameter tracking and optimization history
+- Professional ML development workflow
+- Visual experiment analysis dashboard
 
-- **Main API**: https://agahei-getaround-pricing-api.hf.space
-- **Interactive Documentation**: https://agahei-getaround-pricing-api.hf.space/docs
-- **Health Check**: https://agahei-getaround-pricing-api.hf.space/health
+## 🧠 Machine Learning Pipeline
+
+### Model Development & Performance
+
+**Implemented Models:**
+1. **🚀 XGBoost Regressor** (Primary Model)
+   - Performance: 174.24€ RMSE
+   - Features: Advanced gradient boosting with hyperparameter optimization
+   - Strengths: Excellent handling of mixed data types and outliers
+
+2. **🌲 Random Forest Regressor** (Backup Model)  
+   - Performance: 198.58€ RMSE
+   - Features: Ensemble learning with robust predictions
+   - Strengths: Interpretable feature importance and stable results
+
+3. **📈 Linear Regression** (Baseline Model)
+   - Performance: 244.81€ RMSE
+   - Features: Simple linear relationship modeling
+   - Strengths: Fast training and interpretable coefficients
+
+4. **🎯 Ridge Regression** (Regularized Model)
+   - Performance: 244.81€ RMSE  
+   - Features: L2 regularization for overfitting control
+   - Strengths: Balanced bias-variance trade-off
+
+### Professional ML Development Process
+- ✅ Comprehensive EDA with business insights
+- ✅ Advanced feature engineering and selection
+- ✅ GridSearchCV hyperparameter optimization
+- ✅ Cross-validation and robust evaluation
+- ✅ Model versioning with MLflow tracking
+- ✅ Production deployment with monitoring
 
 
 **Example Usage**:
@@ -127,6 +163,10 @@ The live applications are deployed from separate repositories optimized for prod
 - **🔧 API**: `Deployment HF Pricing API/hf-space/`
   - Repository: https://huggingface.co/spaces/AgaHei/getaround-pricing-api
   - Live API: https://agahei-getaround-pricing-api.hf.space
+
+- **🔬 MLflow**: `MLflow-HF-Space/getaround-mlflow/`
+  - Repository: https://huggingface.co/spaces/AgaHei/getaround-mlflow
+  - Live Tracking: https://huggingface.co/spaces/AgaHei/getaround-mlflow
 
 ### 📝 **Development vs Deployment**
 
@@ -217,7 +257,7 @@ Visit the interactive documentation at `/docs` endpoint for comprehensive API te
 
 ## 👥 Contributing
 
-This project was developed as part of the Jedha Data Science certification program. 
+This project was developed as part of the Jedha Data Science and Engineering Fullstack certification program. 
 
 
 ## 📝 License
@@ -233,12 +273,4 @@ This project is part of an educational certification program. Please respect aca
 
 ---
 
-**Live Applications**: 
-- [Dashboard](https://huggingface.co/spaces/AgaHei/getaround-dashboard)
-- [API](https://agahei-getaround-pricing-api.hf.space)
-
-**Note**: This project demonstrates end-to-end ML engineering skills including data analysis, model development, API creation, web application deployment, and production monitoring.
-
----
-
-*Last Updated: November 2025 - Repository cleaned for professional portfolio presentation*
+*Last Updated: December 2025 - Repository cleaned for professional portfolio presentation*
