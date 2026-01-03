@@ -145,6 +145,7 @@ getaround-pricing-api/
 ├── 🤖 models/
 │   └── optimized_model.pkl          # Production XGBoost model (55MB)
 ├── � Core ML Files/
+│   ├── Getaround_Project_AH.ppt      # Presentation of the project
 │   ├── smart_input_encoder.py       # Production data preprocessing
 │   ├── feature_order.txt           # Model feature specification (59 features)
 │   ├── requirements.txt            # Python dependencies
