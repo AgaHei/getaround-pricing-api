@@ -27,7 +27,6 @@ env/
 
 # Development Archives & Legacy Code
 archive/
-app/
 legacy/
 
 # Docker & Deployment (handled in separate HF Spaces)
